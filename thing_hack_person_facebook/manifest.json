@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+
+    "name": "Thing Hack Person Facebook",
+    "version": "0.1.2",
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["jquery-1.10.2.min.js", "main.js"]
+    }],
+    "web_accessible_resources": [
+        "jquery-1.10.2.min.map",
+        "images/back.PNG",
+        "images/forward.PNG",
+        "images/reddit.PNG",
+        "images/twitter.PNG",
+        "images/HN.gif"
+    ],
+    "background": {
+        "scripts":["background.js"]
+    },
+    "permissions": [
+        "webRequest",
+        "https://twitter.com/*",
+        "http://www.reddit.com/*",
+        "https://www.hnsearch.com/*",
+        "webRequestBlocking"
+    ]
+}
